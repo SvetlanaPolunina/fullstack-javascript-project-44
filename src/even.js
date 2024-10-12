@@ -5,10 +5,7 @@ const even = () => {
   const timesRepeat = 3;
   const maxNumber = 100;
   const getRandomInt = (max) => Math.floor(Math.random() * max);
-  // eslint-disable-next-line no-unused-vars, arrow-body-style
-  const getCorrectAnswer = (num) => {
-    return (num % 2 === 0) ? 'yes' : 'no';
-  };
+  const getCorrectAnswer = (num) => ((num % 2 === 0) ? 'yes' : 'no');
   const userName = greeting();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
