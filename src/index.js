@@ -1,5 +1,5 @@
 import readlineSyng from 'readline-sync';
-import askUserName from './cli';
+import askUserName from './cli.js';
 
 const runQuiz = (quiz, gameConditionsMessage) => {
   const name = askUserName();
