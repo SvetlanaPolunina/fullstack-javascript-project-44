@@ -1,9 +1,12 @@
 import readlineSyng from 'readline-sync';
+import askUserName from './cli';
 
-const runQuiz = (quiz, name, gameConditionsMessage) => {
-  const roundCount = quiz.length;
+const runQuiz = (quiz, gameConditionsMessage) => {
+  const name = askUserName();
+
   console.log(gameConditionsMessage);
 
+  const roundCount = quiz.length;
   for (let i = 0; i < roundCount; i += 1) {
     const { question, correctAnswer } = quiz.at(i);
 
