@@ -1,6 +1,18 @@
 import readlineSyng from 'readline-sync';
 import askUserName from './cli.js';
 
+const getQuiz = (getRound) => {
+  const roundCount = 3;
+
+  const quiz = [];
+  for (let i = 0; i < roundCount; i += 1) {
+    const round = getRound();
+    quiz.push(round);
+  }
+
+  return quiz;
+};
+
 const runQuiz = (quiz, gameConditionsMessage) => {
   const name = askUserName();
 
@@ -26,4 +38,4 @@ const runQuiz = (quiz, gameConditionsMessage) => {
   return 0;
 };
 
-export default runQuiz;
+export { getQuiz, runQuiz };

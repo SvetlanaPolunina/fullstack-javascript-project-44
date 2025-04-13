@@ -1,28 +1,24 @@
-import runQuiz from '../index.js';
+import { getQuiz, runQuiz } from '../index.js';
 
 const brainEven = () => {
-  const getBrainEvenQuiz = (roundCount, maxNum) => {
+  const getRound = () => {
+    const maxNum = 100;
     const getRandomNum = (max) => Math.floor(Math.random() * max);
     const isEven = (num) => num % 2 === 0;
     const getCorrectAnswer = (num) => (isEven(num) ? 'yes' : 'no');
 
-    const quiz = [];
-    for (let i = 0; i < roundCount; i += 1) {
-      const question = getRandomNum(maxNum);
-      const correctAnswer = getCorrectAnswer(question);
-      const round = { question, correctAnswer };
-      quiz.push(round);
-    }
+    const num = getRandomNum(maxNum);
+    const question = num.toString();
+    const correctAnswer = getCorrectAnswer(num);
+    const round = { question, correctAnswer };
 
-    return quiz;
+    return round;
   };
 
-  const roundCount = 3;
-  const maxNum = 100;
   const gameConditionsMessage = 'Answer "yes" if the number is even, otherwise answer "no"';
 
-  const brainEvenQuiz = getBrainEvenQuiz(roundCount, maxNum);
-  runQuiz(brainEvenQuiz, gameConditionsMessage);
+  const quiz = getQuiz(getRound);
+  runQuiz(quiz, gameConditionsMessage);
 };
 
 export default brainEven;

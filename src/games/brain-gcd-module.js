@@ -1,4 +1,4 @@
-import runQuiz from '../index.js';
+import { getQuiz, runQuiz } from '../index.js';
 
 const brainGsd = () => {
   const getRound = () => {
@@ -23,19 +23,7 @@ const brainGsd = () => {
     return round;
   };
 
-  const getQuiz = () => {
-    const roundCount = 3;
-
-    const quiz = [];
-    for (let i = 0; i < roundCount; i += 1) {
-      const round = getRound();
-      quiz.push(round);
-    }
-
-    return quiz;
-  };
-
-  const quiz = getQuiz();
+  const quiz = getQuiz(getRound);
   const gameConditionsMessage = 'Find the greatest common divisor of given numbers.';
 
   runQuiz(quiz, gameConditionsMessage);
