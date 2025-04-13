@@ -13,7 +13,6 @@ const brainCalc = () => {
       const operation = getRandomOperation(operations);
 
       const question = `${firstNum} ${operation} ${secondNum}`;
-      console.log(question);
       let expression;
       switch (operation) {
         case '+':
@@ -43,15 +42,13 @@ const brainCalc = () => {
     return quiz;
   };
 
-  const gameParam = {
-    roundCount: 3,
-    maxNum: 100,
-    operations: ['+', '-', '*'],
-    conditionsMessage: 'What is the result of the expression?',
-  };
+  const roundCount = 3;
+  const maxNum = 100;
+  const operations = ['+', '-', '*'];
+  const gameConditionsMessage = 'What is the result of the expression?';
 
-  const quiz = getBrainCalcQuiz(gameParam.roundCount, gameParam.maxNum, gameParam.operations);
-  runQuiz(quiz, gameParam.conditionsMessage);
+  const quiz = getBrainCalcQuiz(roundCount, maxNum, operations);
+  runQuiz(quiz, gameConditionsMessage);
 };
 
 export default brainCalc;
