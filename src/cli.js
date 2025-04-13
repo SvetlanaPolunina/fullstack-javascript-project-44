@@ -9,4 +9,4 @@ const askUserName = () => {
   return name;
 };
 
-export { askUserName };
+export default askUserName;
