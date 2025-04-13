@@ -1,5 +1,5 @@
 import readlineSyng from 'readline-sync';
-import { askUserName } from './cli.js';
+import { askUserName } from '../cli.js';
 
 const brainEven = () => {
   const getBrainEvenQuiz = (roundCount, maxNum) => {
