@@ -15,8 +15,8 @@
 #### brain-gcd game
 [![asciicast](https://asciinema.org/a/715288.svg)](https://asciinema.org/a/715288)
 
-### brain-progression game
+#### brain-progression game
 [![asciicast](https://asciinema.org/a/715879.svg)](https://asciinema.org/a/715879)
 
-### brain-prime game
+#### brain-prime game
 [![asciicast](https://asciinema.org/a/715885.svg)](https://asciinema.org/a/715885)
