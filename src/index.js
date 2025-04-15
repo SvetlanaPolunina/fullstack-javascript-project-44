@@ -27,4 +27,4 @@ const runQuiz = (getQuiz, gameConditionsMessage) => {
   return 0;
 };
 
-export { getQuiz, runQuiz };
+export default runQuiz;
