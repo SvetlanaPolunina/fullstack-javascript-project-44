@@ -1,44 +1,51 @@
-import { getQuiz, runQuiz } from '../index.js';
+import { runQuiz, getRandomNum } from '../index.js';
+
+const gameConditionsMessage = 'What is the result of the expression?';
+
+const getRandomItem = (coll) => {
+  const randomIndex = Math.floor(Math.random() * coll.length);
+  return coll[randomIndex];
+};
+
+const getQuestion = (firstNum, secondNum, operator) => `${firstNum} ${operator} ${secondNum}`;
+
+const getCorrectAnswer = (firstNum, secondNum, operator) => {
+  let result;
+  switch (operator) {
+    case '+':
+      result = firstNum + secondNum;
+      break;
+    case '-':
+      result = firstNum - secondNum;
+      break;
+    case '*':
+      result = firstNum * secondNum;
+      break;
+    default:
+      throw new Error(`Hasn't got ${operator} operator`);
+  }
+
+  return result.toString();
+};
+
+const getRound = () => {
+  const maxNum = 100;
+  const operations = ['+', '-', '*'];
+  
+  const firstNum = getRandomNum(maxNum);
+  const secondNum = getRandomNum(maxNum);
+  const operator = getRandomItem(operations);
+
+  const question = getQuestion(firstNum, secondNum, operator);
+  const correctAnswer = getCorrectAnswer(firstNum, secondNum, operator);
+  
+  const round = { question, correctAnswer };
+
+  return round;
+};
 
 const brainCalc = () => {
-  const getRound = () => {
-    const maxNum = 100;
-    const operations = ['+', '-', '*'];
-    const getRandomNum = (max) => Math.floor(Math.random() * max);
-    const getRandomItem = (coll) => {
-      const randomIndex = Math.floor(Math.random() * coll.length);
-      return coll[randomIndex];
-    };
-
-    const firstNum = getRandomNum(maxNum);
-    const secondNum = getRandomNum(maxNum);
-    const operation = getRandomItem(operations);
-
-    const question = `${firstNum} ${operation} ${secondNum}`;
-    let result;
-    switch (operation) {
-      case '+':
-        result = firstNum + secondNum;
-        break;
-      case '-':
-        result = firstNum - secondNum;
-        break;
-      case '*':
-        result = firstNum * secondNum;
-        break;
-      default:
-        throw new Error(`Hasn't got ${operation} operation`);
-    }
-
-    const correctAnswer = result.toString();
-    const round = { question, correctAnswer };
-
-    return round;
-  };
-
-  const gameConditionsMessage = 'What is the result of the expression?';
-  const quiz = getQuiz(getRound);
-  runQuiz(quiz, gameConditionsMessage);
+  runQuiz(getRound, gameConditionsMessage);
 };
 
 export default brainCalc;
