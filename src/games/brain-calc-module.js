@@ -29,16 +29,16 @@ const getCorrectAnswer = (firstNum, secondNum, operator) => {
 };
 
 const getRound = () => {
-  const maxNum = 100;
+  const maxNum = 20;
   const operations = ['+', '-', '*'];
-  
+
   const firstNum = getRandomNum(maxNum);
   const secondNum = getRandomNum(maxNum);
   const operator = getRandomItem(operations);
 
   const question = getQuestion(firstNum, secondNum, operator);
   const correctAnswer = getCorrectAnswer(firstNum, secondNum, operator);
-  
+
   const round = { question, correctAnswer };
 
   return round;
