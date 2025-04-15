@@ -29,4 +29,4 @@ const runQuiz = (getQuiz, gameConditionsMessage) => {
   return 0;
 };
 
-export default { runQuiz, getRandomNum };
+export { runQuiz, getRandomNum };
