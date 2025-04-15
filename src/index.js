@@ -1,6 +1,8 @@
 import readlineSyng from 'readline-sync';
 import askUserName from './cli.js';
 
+const getRandomNum = (max) => Math.floor(Math.random() * max);
+
 const runQuiz = (getQuiz, gameConditionsMessage) => {
   const roundCount = 3;
 
@@ -27,4 +29,4 @@ const runQuiz = (getQuiz, gameConditionsMessage) => {
   return 0;
 };
 
-export default runQuiz;
+export default { runQuiz, getRandomNum };
