@@ -1,26 +1,15 @@
 import readlineSyng from 'readline-sync';
 import askUserName from './cli.js';
 
-const getQuiz = (getRound) => {
+const runQuiz = (getQuiz, gameConditionsMessage) => {
   const roundCount = 3;
 
-  const quiz = [];
-  for (let i = 0; i < roundCount; i += 1) {
-    const round = getRound();
-    quiz.push(round);
-  }
-
-  return quiz;
-};
-
-const runQuiz = (quiz, gameConditionsMessage) => {
   const name = askUserName();
 
   console.log(gameConditionsMessage);
 
-  const roundCount = quiz.length;
   for (let i = 0; i < roundCount; i += 1) {
-    const { question, correctAnswer } = quiz.at(i);
+    const { question, correctAnswer } = getQuiz();
 
     console.log(`Question: ${question}`);
     const answer = readlineSyng.question('Your answer: ').trim();
