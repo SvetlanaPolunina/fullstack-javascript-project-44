@@ -33,8 +33,6 @@ const getRound = () => {
   return round;
 };
 
-const brainPrime = () => {
-  runQuiz(getRound, gameConditionsMessage);
-};
+const brainPrime = () => runQuiz(getRound, gameConditionsMessage);
 
 export default brainPrime;

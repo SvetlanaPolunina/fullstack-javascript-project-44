@@ -43,8 +43,6 @@ const getRound = () => {
   return round;
 };
 
-const brainProgression = () => {
-  runQuiz(getRound, gameConditionsMessage);
-};
+const brainProgression = () => runQuiz(getRound, gameConditionsMessage);
 
 export default brainProgression;

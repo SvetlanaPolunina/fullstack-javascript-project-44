@@ -21,8 +21,6 @@ const getRound = () => {
   return round;
 };
 
-const brainEven = () => {
-  runQuiz(getRound, gameConditionsMessage);
-};
+const brainEven = () => runQuiz(getRound, gameConditionsMessage);
 
 export default brainEven;

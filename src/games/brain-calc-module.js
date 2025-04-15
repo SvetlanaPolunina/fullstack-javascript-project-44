@@ -44,8 +44,6 @@ const getRound = () => {
   return round;
 };
 
-const brainCalc = () => {
-  runQuiz(getRound, gameConditionsMessage);
-};
+const brainCalc = () => runQuiz(getRound, gameConditionsMessage);
 
 export default brainCalc;
