@@ -24,7 +24,7 @@ const getCorrectAnswer = (progression, selectedIndex) => progression.at(selected
 
 const getRound = () => {
   const minCount = 5;
-  const maxCount = 10;
+  const maxCount = 15;
   const maxNum = 10;
   const maxStep = 10;
 
