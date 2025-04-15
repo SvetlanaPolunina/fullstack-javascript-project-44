@@ -6,14 +6,17 @@
 
 ### Asciinemas
 
-#### brain-even
+#### brain-even game
 [![asciicast](https://asciinema.org/a/715112.svg)](https://asciinema.org/a/715112)
 
-#### brain-calc
+#### brain-calc game
 [![asciicast](https://asciinema.org/a/715116.svg)](https://asciinema.org/a/715116)
 
-#### brain-gcd
+#### brain-gcd game
 [![asciicast](https://asciinema.org/a/715288.svg)](https://asciinema.org/a/715288)
 
-### brain-progression
+### brain-progression game
 [![asciicast](https://asciinema.org/a/715879.svg)](https://asciinema.org/a/715879)
+
+### brain-prime game
+[![asciicast](https://asciinema.org/a/715885.svg)](https://asciinema.org/a/715885)
