@@ -30,11 +30,11 @@ const getCorrectAnswer = (firstNum, secondNum, operator) => {
 
 const getRound = () => {
   const maxNum = 20;
-  const operations = ['+', '-', '*'];
+  const operators = ['+', '-', '*'];
 
   const firstNum = getRandomNum(maxNum);
   const secondNum = getRandomNum(maxNum);
-  const operator = getRandomItem(operations);
+  const operator = getRandomItem(operators);
 
   const question = getQuestion(firstNum, secondNum, operator);
   const correctAnswer = getCorrectAnswer(firstNum, secondNum, operator);
