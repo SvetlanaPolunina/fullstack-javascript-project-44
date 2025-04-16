@@ -3,13 +3,19 @@
 
 # Brain-games @hexlet/code
 
-«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
+"Brain games" is a set of five console-based games designed similarly to popular brain-training mobile apps. Each game presents questions that require correct answers. After three correct answers, the game is considered completed. Incorrect answers end the game and prompt the player to try again.
 
-* Калькулятор. Арифметические выражения, которые необходимо вычислить.
-* Прогрессия. Поиск пропущенных чисел в последовательности чисел.
-* Определение четного числа.
-* Определение наибольшего общего делителя.
-* Определение простого числа.
+Games:
+* Calculator. Solve arithmetic expressions.
+
+* Progression. Find the missing numbers in a sequence.
+
+* Even or Odd. Determine if a number is even.
+
+* Greatest Common Divisor (GCD). Find the greatest common divisor of two numbers.
+
+* Prime Number. Check if a number is prime.
+
 
 ## Install
 ```
@@ -18,31 +24,31 @@ npm install @hexlet/code
 
 ## Usage examples
 
-### Калькулятор
+### Calculator
 ```
 brain-calc
 ```
 [![asciicast](https://asciinema.org/a/715116.svg)](https://asciinema.org/a/715116)
 
-### Прогрессия
+### Progression
 ```
 brain-progression
 ```
 [![asciicast](https://asciinema.org/a/715879.svg)](https://asciinema.org/a/715879)
 
-### Определение четного числа
+### Even or Odd
 ```
 brain-even
 ```
 [![asciicast](https://asciinema.org/a/715112.svg)](https://asciinema.org/a/715112)
 
-### Определение наибольшего общего делителя
+### Greatest Common Divisor (GCD)
 ```
 brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/715288.svg)](https://asciinema.org/a/715288)
 
-### Определение простого числа
+### Prime Number
 ```
 brain-prime
 ```
