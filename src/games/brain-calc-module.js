@@ -7,9 +7,7 @@ const getRandomItem = (coll) => {
   return coll[randomIndex];
 };
 
-const getQuestion = (firstNum, secondNum, operator) => `${firstNum} ${operator} ${secondNum}`;
-
-const getCorrectAnswer = (firstNum, secondNum, operator) => {
+const calcOperation = (firstNum, secondNum, operator) => {
   let result;
   switch (operator) {
     case '+':
@@ -25,8 +23,14 @@ const getCorrectAnswer = (firstNum, secondNum, operator) => {
       throw new Error(`Hasn't got ${operator} operator`);
   }
 
-  return result.toString();
+  return result;
 };
+
+const getQuestion = (firstNum, secondNum, operator) => `${firstNum} ${operator} ${secondNum}`;
+
+const getCorrectAnswer = (firstNum, secondNum, operator) => (
+  calcOperation(firstNum, secondNum, operator).toString()
+);
 
 const getRound = () => {
   const maxNum = 20;
