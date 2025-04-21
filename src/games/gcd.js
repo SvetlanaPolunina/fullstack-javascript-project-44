@@ -27,6 +27,6 @@ const getRound = () => {
   return round;
 };
 
-const brainGsd = () => runQuiz(getRound, gameConditionsMessage);
+const brainGcd = () => runQuiz(getRound, gameConditionsMessage);
 
-export default brainGsd;
+export default brainGcd;
